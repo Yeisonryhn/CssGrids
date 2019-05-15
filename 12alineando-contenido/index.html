@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Alineando items</title>
+		<style>
+
+			body{
+				font-family: Arial;
+			}
+			h1{
+				text-align: center;
+			}
+			.container{				
+				display: grid;				
+				grid-template-columns: repeat(4,200px);
+				grid-template-rows: repeat(3,200px);
+				/*grid-auto-rows: repeat(4,200px);*/
+				grid-gap:5px;
+				height: 100vh;			
+				/*align-content: center end start stretch space-evenly space-between space-around;*/
+				align-content: center;
+				/*igual para el justify-content*/
+				justify-content: center;
+			}
+			.item{
+				background-color: white;
+				border: 1px solid red;
+				padding: 0px;
+				object-fit: cover;
+
+			}
+			.item.b{
+				background-color: black;
+			}
+			
+			.item:nth-of-type(5){
+				background-color: lightgray;
+				border: 1px solid red;
+				padding: 0px;
+				object-fit: cover;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Colocar nombre a las líneas</h1>
+		<section class="container">
+			<div class="item">Item 1</div>
+			<div class="item">Item 2</div>
+			<div class="item">Item 3</div>
+			<div class="item">Item 4</div>
+			<div class="item">Item 5</div>
+			<div class="item">Item 6</div>
+			<div class="item">Item 7</div>
+			<div class="item">Item 8</div>
+			<div class="item">Item 9</div>
+			<div class="item">Item 10</div>
+			<div class="item">Item 11</div>
+			<div class="item">Item 12</div>			
+
+			<!--TABLERO DE AJEDREZ
+			<div class="item"></div>
+			<div class="item b"></div>
+			<div class="item">contenido 3</div>
+			<div class="item b">contenido 4</div>
+			<div class="item">contenido 5</div>
+			<div class="item b">contenido 6</div>
+			<div class="item">contenido 7</div>
+			<div class="item b">contenido 8</div>
+			<div class="item">contenido 9</div>
+			<div class="item b">contenido 10</div>
+			<div class="item">contenido 11</div>
+			<div class="item b">contenido 12</div>
+			<div class="item">contenido 13</div>
+			<div class="item">contenido 14</div>
+			<div class="item">contenido 15</div>
+			<div class="item">contenido 16</div>
+			<div class="item">contenido 17</div>
+			<div class="item">contenido 18</div>
+			<div class="item">contenido 19</div>
+			<div class="item">contenido 20</div>
+			<div class="item">contenido 21</div>
+			<div class="item">contenido 22</div>
+			<div class="item">contenido 23</div>
+			<div class="item">contenido 24</div>
+			<div class="item">contenido 25</div>
+			<div class="item">contenido 26</div>
+			<div class="item">contenido 27</div>
+			<div class="item">contenido 28</div>
+			<div class="item">contenido 29</div>
+			<div class="item">contenido 30</div>
+			<div class="item">contenido 31</div>
+			<div class="item">contenido 32</div>
+			<div class="item">contenido 33</div>
+			<div class="item">contenido 34</div>
+			<div class="item">contenido 35</div>
+			<div class="item">contenido 36</div>
+			<div class="item">contenido 37</div>
+			<div class="item">contenido 38</div>
+			<div class="item">contenido 39</div>
+			<div class="item">contenido 40</div>
+			<div class="item">contenido 41</div>
+			<div class="item">contenido 42</div>
+			<div class="item">contenido 43</div>
+			<div class="item">contenido 44</div>
+			<div class="item">contenido 45</div>
+			<div class="item">contenido 46</div>
+			<div class="item">contenido 47</div>
+			<div class="item">contenido 48</div>
+			<div class="item">contenido 49</div>
+			<div class="item">contenido 50</div>
+			<div class="item">contenido 51</div>
+			<div class="item">contenido 52</div>
+			<div class="item">contenido 53</div>
+			<div class="item">contenido 54</div>
+			<div class="item">contenido 55</div>
+			<div class="item">contenido 56</div>
+			<div class="item">contenido 57</div>
+			<div class="item">contenido 58</div>
+			<div class="item">contenido 59</div>
+			<div class="item">contenido 60</div>
+			<div class="item">contenido 61</div>
+			<div class="item">contenido 62</div>
+			<div class="item">contenido 63</div>
+			<div class="item">contenido 64</div> -->
+		</section>
+	</body>
+	</html>	
