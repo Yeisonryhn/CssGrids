@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tamaño de item en Columnas</title>
+		<style>
+			body{
+				font-family: Arial;
+			}
+			.container{
+				
+				display: grid;				
+				grid-template: repeat(4,1fr)/ repeat(3,1fr);
+				grid-gap:10px;
+				height: 100vh;
+				
+			}
+			.item{
+				background-color: lightgray;
+				border: 1px solid red;
+				padding: 20px;
+				
+			}
+
+			.item:nth-of-type(1){
+				grid-column: 1 / 3;/*QUE ESTE ITEM COMIENCE EN LA LINEA 1 Y TERMINE EN LA LINEA 3*/
+
+			}
+			.item:nth-of-type(3){
+				grid-column: 1 / span 2;/*QUE COMIENCE EN 1 Y QUE OCUPE 2 ESPACIOS*/
+			}
+
+			.item:nth-of-type(3){
+				grid-column: 1 / span 2;/*QUE COMIENCE EN 1 Y QUE OCUPE 2 ESPACIOS*/
+			}
+			.item:nth-of-type(6){
+				grid-column: 2 / -1;/*QUE COMIENCE EN 1 Y QUE OCUPE 2 TODO LO QUE QUEDA DE PANTALLA HACIA LA DERECHA*/
+			}
+			.item:nth-of-type(7){
+				grid-column: 1 / -1;/*QUE COMIENCE EN 1 Y QUE OCUPE 2 TODO LO QUE QUEDA DE PANTALLA HACIA LA DERECHA*/
+			}
+			
+		</style>
+	</head>
+	<body>
+		<section class="container">
+			<div class="item">Contenido #1</div>
+			<div class="item">Contenido #2</div>
+			<div class="item">Contenido #3</div>
+			<div class="item">Contenido #4</div>
+			<div class="item">Contenido #5</div>
+			<div class="item">Contenido #6</div>
+			<div class="item">Contenido #7</div>
+			<div class="item">Contenido #8</div>
+			<div class="item">Contenido #9</div>
+			<div class="item">Contenido #10</div>
+			<div class="item">Contenido #11</div>
+			<div class="item">Contenido #12</div>
+		</section>
+	</body>
+	</html>	

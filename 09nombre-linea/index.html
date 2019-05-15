@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Poner nombres en líneas</title>
+		<style>
+			body{
+				font-family: Arial;
+			}
+			.container{
+				
+				display: grid;				
+				grid-template-rows: [inicio] 200px [fila1] 200px [final];
+				grid-template-columns: [inicio] 1fr [linea1] 1fr [linea2] 1fr [destacado-end] 1fr [linea4] 1fr [destacado2-end] 1fr [linea6] 1fr [final];
+
+				grid-gap:5px;
+				height: 100vh;
+
+				
+			}
+			.item{
+				background-color: lightgray;
+				border: 1px solid red;
+				padding: 0px;
+				object-fit: cover;
+			}
+
+			.item:nth-of-type(1){
+				/*Poniendoles el tamaño con la notacion por defecto*/
+				/*grid-column: 1 / span 3;	
+				grid-row: 1 / span 2;*/
+				/*y ahora poniendoles el tamaño al usar nombres de lineas, definidas arriba*/
+				grid-column: inicio/destacado-end;
+				grid-row: inicio / final;
+			}
+			.item:nth-of-type(2){
+				/*grid-column: span 2;
+				grid-row: span 2;*/
+				grid-column: destacado-end/destacado2-end;
+				grid-row: inicio / final;
+			}
+
+			.item:nth-of-type(3){
+				/*grid-column: span 2;*/
+				grid-column: destacado2-end/final;
+			}
+		
+			
+		</style>
+	</head>
+	<body>
+		<h1>Colocar nombre a las líneas</h1>
+		<section class="container">
+			<img src="../img/asd.jpg" width="100%" height="100%" alt="" class="item">
+			<img src="../img/asd.jpg" width="100%" height="100%" alt="" class="item">
+			<img src="../img/asd.jpg" width="100%" height="100%" alt="" class="item">
+			<img src="../img/asd.jpg" width="100%" height="100%" alt="" class="item">
+			<img src="../img/asd.jpg" width="100%" height="100%" alt="" class="item">
+
+			<!--<div class="item">Contenido #1</div>
+			<div class="item">Contenido #2</div>
+			<div class="item">Contenido #3</div>
+			<div class="item">Contenido #4</div>
+			<div class="item">Contenido #5</div>-->
+			<!--<div class="item">Contenido #6</div>-->
+			
+		</section>
+	</body>
+	</html>	

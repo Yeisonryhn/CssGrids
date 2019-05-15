@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tamaño de item en Columnas</title>
+		<style>
+			body{
+				font-family: Arial;
+			}
+			.container{
+				
+				display: grid;				
+				grid-template: repeat(2,200px)/ repeat(7,1fr);
+				grid-gap:5px;
+				height: 100vh;
+
+				
+			}
+			.item{
+				background-color: lightgray;
+				border: 1px solid red;
+				padding: 20px;
+				
+			}
+
+			.item:nth-of-type(1){
+				grid-column: 1 / span 3;	
+				grid-row: 1 / span 2;
+
+			}
+			.item:nth-of-type(2){
+				grid-column: span 2;
+				grid-row: span 2;
+			}
+
+			.item:nth-of-type(3){
+				grid-column: span 2;
+			}
+			.item:nth-of-type(6){
+				
+			}
+			.item:nth-of-type(7){
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<section class="container">
+			<div class="item">Contenido #1</div>
+			<div class="item">Contenido #2</div>
+			<div class="item">Contenido #3</div>
+			<div class="item">Contenido #4</div>
+			<div class="item">Contenido #5</div>
+			<!--<div class="item">Contenido #6</div>-->
+			
+		</section>
+	</body>
+	</html>	
