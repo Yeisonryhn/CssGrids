@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Funciones</title>
+		<style>
+			body{
+				font-family: Arial;
+			}
+			.container{
+				
+				display: grid;				
+				grid-template: 70px 1fr 70px/ 400px 1fr;
+				grid-gap:10px;
+				height: 100vh;
+				grid-template-areas: "header header"/*Header ocupa dos columnas*/ 
+														 "left contenido" /*Aqui hay dos columnas*/
+														 "footer footer";/*footer ocupa dos columnas*/
+														 /*Defino mis areas*/	
+
+			}
+			.item{
+				background-color: lightgray;
+				border: 1px solid red;
+				padding: 20px;
+				border-radius: 50px;
+			}
+			.header{
+				grid-area: header;/*Digo que este elemento ocupa esa area, que está definida anteriormente llamada header*/
+			}	
+			.left{
+				grid-area: left;
+			}
+			.contenido{
+				grid-area: contenido;
+			}
+			.footer{
+				grid-area: footer;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="container">
+			<div class="item header">header</div>
+			<div class="item left">left</div>
+			<div class="item contenido">contenido</div>
+			<div class="item footer">footer</div>
+		</section>
+	</body>
+	</html>	
